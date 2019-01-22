@@ -28,7 +28,7 @@ function getLength(arr, cb) {
 }
 //print the result in the Console
 getLength(items, function(length){
-console.log(length);
+  console.log(length);
 });
 
 function last(arr, cb) {
@@ -42,16 +42,40 @@ last(items,function(length){
 
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
+  return cb(x+y);
 }
+//print the result in the Console
+sumNums(10,4,function(add)
+{
+  console.log(add);
+});
 
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
+  return cb(x*y);
 }
+//print the result in the Console
+multiplyNums(9,9,function(multiply)
+{
+  console.log(multiply);
+});
 
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
+  return cb(list.includes(item));
 }
+//print the result in the Console
+//check if Pencil is presented in the give array
+contains('Pencil',items,function(check){
+  console.log(check);
+})
+
+//check if Eraser is presented in the give array
+contains('Eraser',items,function(check){
+  console.log(check);
+})
+
 
 /* STRETCH PROBLEM */
 
