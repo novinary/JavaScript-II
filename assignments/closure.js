@@ -1,6 +1,18 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
-
+function greet()
+{
+  let greeting="Hello there,";
+  let msg="What's up?"
+  
+  function user()
+  {
+    let userName="JavascriptIsGroovy";
+    console.log(`${greeting} ${userName}! ${msg}`);
+  }
+  user();
+}
+greet();
 
 // ==== Challenge 2: Create a counter function ====
 const counter = () => {
