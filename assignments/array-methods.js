@@ -93,7 +93,29 @@ console.log(ticketPriceTotal);
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
 // Problem 1
+//Keep record of business names and how much they have donated
+let keepRecord = runners.map(function(item)
+{
+    return (item.company_name + " " + "donated" + " " + item.donation);
+});
+console.log(keepRecord);
 
 // Problem 2
+// Big donors
+let bigDonor = runners.filter(person => person.donation > 250) 
+let bigDonorCo = bigDonor.map(a => a.company_name)
+
+console.log("There are" + " " + bigDonorCo.length + " " + "companies that donated more than 250."
++ "Below are the list of these 9 companies:" + " " + bigDonorCo
+)
+
 
 // Problem 3
+//Small donors
+let smallDonor = runners.filter(person => person.donation < 50)
+let smallDonorCo = smallDonor.map(a => a.company_name)
+
+console.log("There are" + " " + smallDonorCo.length + " " + "companies that donated less than 50."
++ "Below are the list of these companies:" + " " + smallDonorCo
+)
+ 
