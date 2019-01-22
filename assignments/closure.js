@@ -4,7 +4,7 @@ function greet()
 {
   let greeting="Hello there,";
   let msg="What's up?"
-  
+
   function user()
   {
     let userName="JavascriptIsGroovy";
@@ -15,12 +15,21 @@ function greet()
 greet();
 
 // ==== Challenge 2: Create a counter function ====
+ // Return a function that when invoked increments and returns a counter variable.
+ let count = 0;
 const counter = () => {
-  // Return a function that when invoked increments and returns a counter variable.
+
+  return function(){
+    count++;
+    return count;
+  }
 };
 // Example usage: const newCounter = counter();
 // newCounter(); // 1
 // newCounter(); // 2
+const newCounter = counter();
+console.log(newCounter());
+console.log(newCounter());
 
 /* STRETCH PROBLEM, Do not attempt until you have completed all previous tasks for today's project files */
 
