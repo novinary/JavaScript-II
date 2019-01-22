@@ -79,8 +79,18 @@ contains('Eraser',items,function(check){
 
 /* STRETCH PROBLEM */
 
+let array=[9,9,9,1,2,3,6,6,6]
+
 function removeDuplicates(array, cb) {
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
+    let newArray = array.filter(cb);
+
+    return newArray;
 }
+function filterCb(Element,index,array)
+{
+  return index === array.indexOf(Element);
+}
+console.log(removeDuplicates(array, filterCb));
